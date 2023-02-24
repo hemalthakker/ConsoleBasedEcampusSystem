@@ -8,8 +8,6 @@ public class Student {
 
         System.out.print("\nEnter Full Name of Student : ");
         studentfullname = sc.nextLine();
-
-
         System.out.print("\nEnter UserName : ");
         studentusername = sc.nextLine();
 
