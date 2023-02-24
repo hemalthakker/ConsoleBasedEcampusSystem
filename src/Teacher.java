@@ -240,6 +240,18 @@ public class Teacher extends Main{
                                     }
                                 }
                             }
+                            for(Student student : studentarraylistObj)
+                            {
+                                for(Course allcourse : student.studentAllCourse)
+                                {
+                                    if(allcourse.courseid.equals(courseid))
+                                    {
+                                        System.out.println("Student Id : "+student.getStudentId());
+                                        System.out.println("Student Name : "+student.getStudentName());
+                                        System.out.println("\n\n");
+                                    }
+                                }
+                            }
                         }
                     }
 
