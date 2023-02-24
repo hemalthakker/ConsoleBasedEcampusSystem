@@ -10,6 +10,7 @@ public class Teacher extends Main{
 
     ArrayList<Course> teachercourse = new ArrayList<Course>();
 
+
     /*
      Set Methods
      */
