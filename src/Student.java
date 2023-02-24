@@ -14,7 +14,6 @@ public class Student {
         System.out.print("\nEnter Password : ");
         studentpassword = sc.nextLine();
 
-
 }
     void studentSignin(Scanner sc) {
         String studentusername, studentpassword;
