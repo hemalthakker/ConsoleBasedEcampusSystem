@@ -44,19 +44,19 @@ public class Teacher extends Main{
         //String courseid,coursename;
         //int teacherid,allstudents,studentid;
 
-        System.out.print("Enter Course Id ");
+        System.out.print("\nEnter Course Id ");
         String courseid = sc.nextLine();
 
-        System.out.print("Enter Course Name ");
+        System.out.print("\nEnter Course Name ");
         String coursename = sc.nextLine();
 
-        System.out.println("Enter Course Passing Criteria : ");
+        System.out.println("\nEnter Course Passing Criteria : ");
         int coursepassingcriteria = Integer.parseInt(sc.nextLine());
 
-        System.out.println("Enter Course Credit : ");
+        System.out.println("\nEnter Course Credit : ");
         int coursecredit = Integer.parseInt(sc.nextLine());
 
-        System.out.println("Enter no of students you want to add in your course : ");
+        System.out.println("\nEnter no of students you want to add in your course : ");
         int totalstudents=Integer.parseInt(sc.nextLine());
 
         for(int i=0;i<totalstudents;i++)
@@ -86,6 +86,20 @@ public class Teacher extends Main{
         newCourse.setCourseCredit(coursecredit);
         newCourse.setCousePassingcriteria(coursepassingcriteria);
         teacherCourse.add(newCourse);
+
+
+        //design
+        System.out.println("\n\n The List of Students enrolled in this course are\n\n");
+
+        for(Student student : studentarraylistObj)
+        {
+            if(student.studentAllCourse.contains(courseid))
+            {
+                System.out.println("Student Id : "+student.getStudentId());
+                System.out.println("Student Name : "+student.getStudentName());
+                System.out.println("\n\n");
+            }
+        }
     }
 
     void courseAddUpdate()
