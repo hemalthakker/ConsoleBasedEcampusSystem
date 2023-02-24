@@ -61,7 +61,7 @@ public class Teacher extends Main{
 
         for(int i=0;i<totalstudents;i++)
         {
-            System.out.println("Enter Student Id : ");
+            System.out.println("Enter Student Name : ");
             String studname = sc.nextLine();
             Student findexistingStudent = Teacher.findStudentByStudentName(studentarraylistObj, studname);
             if (findexistingStudent != null){
