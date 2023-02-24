@@ -109,19 +109,7 @@ public class Teacher extends Main{
         }
     }
 
-    void display(String teacherusername)
-    {
-        System.out.println("Displayyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy");
-
-        for(Teacher teacher : teacherarraylistObj)
-        {
-            for(Course course : teacher.teacherCourse)
-            {
-                System.out.println("Teacher Name : " + course.teachername);
-                System.out.println("Teacher Id : "+course.courseid);
-            }
-        }
-    }
+    
 
     void courseAddUpdate(String teacherusername)
     {
