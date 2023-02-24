@@ -4,9 +4,9 @@ import static java.lang.System.exit;
 
 public class Main {
 
-    ArrayList<Teacher> teacherarraylistObj = new ArrayList<Teacher>();
-    ArrayList<Course> coursearraylistObj = new ArrayList<Course>();
-    ArrayList<Student> studenttudentarraylistObj = new ArrayList<Student>();
+    private static ArrayList<Teacher> teacherarraylistObj = new ArrayList<Teacher>();
+    private static final ArrayList<Course> coursearraylistObj = new ArrayList<Course>();
+    private static final ArrayList<Student> studenttudentarraylistObj = new ArrayList<Student>();
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -33,7 +33,7 @@ public class Main {
                             studentObj.studentRegistration(sc);
                             break;
                         case 2:
-                            teacherObj.teacherRegistration(sc);
+                            teacherObj.teacherRegistration(sc,teacherarraylistObj);
                             break;
                         default:
                             System.out.println("Invalid Choice");
