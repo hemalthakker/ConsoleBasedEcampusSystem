@@ -208,7 +208,7 @@ public class Teacher extends Main{
                     String courseid = sc.nextLine();
 
                     Course storeCourse;
-                    bool check=false;
+                    boolean check=false;
 
                     for(Teacher teacher : teacherarraylistObj)
                     {
@@ -235,7 +235,7 @@ public class Teacher extends Main{
                             if (findexistingStudent != null)
                             {
                                 Course newCourse = new Course();
-                                newCourse.setTeacherName(this.username);
+                                newCourse.setTeacherName(storeCourse.teachername);
                                 newCourse.setCourseId(storeCourse.courseid);
                                 newCourse.setCourseName(storeCourse.coursename);
                                 newCourse.setCourseCredit(storeCourse.coursecredit);
