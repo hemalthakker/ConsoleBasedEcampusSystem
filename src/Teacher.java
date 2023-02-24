@@ -93,11 +93,14 @@ public class Teacher extends Main{
 
         for(Student student : studentarraylistObj)
         {
-            if(student.studentAllCourse.contains(courseid))
+            for(Course course : student.studentAllCourse)
             {
-                System.out.println("Student Id : "+student.getStudentId());
-                System.out.println("Student Name : "+student.getStudentName());
-                System.out.println("\n\n");
+                if(course.courseid==courseid)
+                {
+                    System.out.println("Student Id : "+student.getStudentId());
+                    System.out.println("Student Name : "+student.getStudentName());
+                    System.out.println("\n\n");
+                }
             }
         }
     }
