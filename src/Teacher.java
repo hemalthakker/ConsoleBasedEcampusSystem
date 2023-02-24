@@ -40,14 +40,44 @@ public class Teacher extends Main{
         return null;
     }
 
+    void courseAddUpdate(Scanner sc)
+    {
+
+    }
+
+    void marksOperations(Scanner sc)
+    {
+
+    }
+
+    void studentListUpdate(Scanner sc)
+    {
+
+    }
+
     void teacherMenu(Scanner sc)
     {
         System.out.println("Enter 1 to Add or Update Course");
         System.out.println("Enter 2 to Add, Update, View Marks");
         System.out.println("Enter 3 to Add or Delete Student");
         int choice = Integer.parseInt(sc.nextLine());
-        
-
+        switch(choice)
+        {
+            case 1:
+                courseAddUpdate(sc);
+                break;
+            case 2:
+                marksOperations(sc);
+                break;
+            case 3:
+                studentListUpdate(sc);
+                break;
+            case 4:
+                System.exit(0);
+                break;
+            default:
+                System.out.println("\n Enter Valid Choice ");
+        }
     }
 
     void teacher(Scanner sc)
