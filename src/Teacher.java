@@ -59,7 +59,12 @@ public class Teacher extends Main{
         String coursename = sc.nextLine();
 
         System.out.println("Enter Course Passing Criteria : ");
-        
+        int coursepassingcriteria = Integer.parseInt(sc.nextLine());
+
+        System.out.println("Enter Course Credit : ");
+        int coursecredit = Integer.parseInt(sc.nextLine());
+
+
 
         System.out.println("Enter no of students you want to add in your course : ");
         int totalstudents=Integer.parseInt(sc.nextLine());
@@ -70,6 +75,11 @@ public class Teacher extends Main{
             int studid = Integer.parseInt(sc.nextLine());
             Student findexistingStudent = Student.findStudentByStudentId(studentarraylistObj, studid);
             if (findexistingStudent != null){
+
+                Course newCourse = new Course();
+                newCourse.setCourseId(courseid);
+                newCourse.setCourseName(coursename);
+                newCourse.setCourseCredit();
 
             }
 
