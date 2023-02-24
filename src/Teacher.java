@@ -38,7 +38,6 @@ public class Teacher extends Main{
         return null;
     }
 
-
     void addCourse()
     {
         //String courseid,coursename;
@@ -111,6 +110,8 @@ public class Teacher extends Main{
         int choice = Integer.parseInt(sc.nextLine());
         switch(choice)
         {
+            //3 ai ek addCOurse ma nakhi didhela chuta krvana baki
+
             case 1:
                 addCourse();
                 break;
@@ -120,7 +121,10 @@ public class Teacher extends Main{
 
     void marksOperations()
     {
-
+        while(true)
+        {
+            System.out.println(password);
+        }
     }
 
     void studentListUpdate()
