@@ -212,7 +212,7 @@ public class Teacher extends Main{
 
                     for(Teacher teacher : teacherarraylistObj)
                     {
-                        for(Course course : teacherCourse)
+                        for(Course course : teacher.teacherCourse)
                         {
                             if(course.courseid.equals(courseid))
                             {
