@@ -1,6 +1,6 @@
 public class Course {
 
-     int teacherid;
+    int teacherid;
     String courseid;
     String coursename;
     String coursecredit;
