@@ -30,7 +30,15 @@ public class Teacher extends Main{
                 return student;
         return null;
     }
-    
+
+    static Teacher findTeacherByUsername(ArrayList<Teacher> teachers, String input_username){
+        for (Teacher teacher: teachers)
+            if (teacher.getTeacherName().equals(input_username))
+                return teacher;
+        return null;
+    }
+
+
     void addCourse()
     {
         //String courseid,coursename;
@@ -55,7 +63,7 @@ public class Teacher extends Main{
         {
             System.out.println("Enter Student Id : ");
             int studid = Integer.parseInt(sc.nextLine());
-            Student findexistingStudent = Student.findStudentByStudentId(studentarraylistObj, studid);
+            Student findexistingStudent = Teacher.findStudentByStudentId(studentarraylistObj, studid);
             if (findexistingStudent != null){
                 Course newCourse = new Course();
                 newCourse.setTeacherName(this.username);
