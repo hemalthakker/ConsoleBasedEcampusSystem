@@ -122,9 +122,7 @@ public class Teacher extends Main{
             case 1:
                 addCourse(teacherusername);
                 break;
-            case 2:
-                display(teacherusername);
-                break;
+
         }
 
     }
@@ -153,11 +151,18 @@ public class Teacher extends Main{
                             {
                                 System.out.println("\n Enter Marks : ");
                                 int studmarks = Integer.parseInt(sc.nextLine());
-                                
+                                course.marks=studmarks;
                             }
                         }
                     }
-
+                    for(Student student : studentarraylistObj)
+                    {
+                        for(Course course : student.studentAllCourse)
+                        {
+                            System.out.println("\n\n************Marks : "+course.marks);
+                        }
+                    }
+                    break;
             }
         }
     }
