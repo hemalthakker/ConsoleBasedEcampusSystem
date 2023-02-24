@@ -6,12 +6,7 @@ public class Student {
     String studentname;
     double percentage;
     String overallgrade;
-    ArrayList<Course> studentallcourse=new ArrayList<Course>();
-
-
-
-
-
+    ArrayList<Course> studentAllCourse=new ArrayList<Course>();
 
     void studentRegistration(Scanner sc)
     {
