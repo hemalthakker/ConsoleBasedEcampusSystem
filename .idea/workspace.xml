@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="115549c6-f69e-41ae-a73d-b08e88658cc8" name="Changes" comment="Main">
+    <list default="true" id="115549c6-f69e-41ae-a73d-b08e88658cc8" name="Changes" comment="1st">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Teacher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,10 +20,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+=======
+<<<<<<< HEAD
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "E:/Java/M/Mayur/BankSystem0004"
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Downloads/Mayur (3)&quot;
+>>>>>>> 5fc3cc50874be34d58dc270d50550c0017c473f9
+>>>>>>> 48b342bd4443d9f984220eee4c4f0dec5885b56d
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -77,6 +95,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Main" />
+<<<<<<< HEAD
     <option name="LAST_COMMIT_MESSAGE" value="Main" />
+=======
+<<<<<<< HEAD
+    <MESSAGE value="1st commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="1st commit" />
+=======
+    <MESSAGE value="1st" />
+    <option name="LAST_COMMIT_MESSAGE" value="1st" />
+>>>>>>> 5fc3cc50874be34d58dc270d50550c0017c473f9
+>>>>>>> 48b342bd4443d9f984220eee4c4f0dec5885b56d
   </component>
 </project>
