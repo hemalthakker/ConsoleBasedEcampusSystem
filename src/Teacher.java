@@ -24,9 +24,9 @@ public class Teacher extends Main{
         return this.username;
     }
 
-    static Student findStudentByStudentId(ArrayList<Student> students, int input_studentid){
+    static Student findStudentByStudentName(ArrayList<Student> students, String input_studentname){
         for (Student student: students)
-            if (student.getStudentId()==input_studentid)
+            if (student.getStudentName().equals(input_studentname))
                 return student;
         return null;
     }
@@ -62,8 +62,8 @@ public class Teacher extends Main{
         for(int i=0;i<totalstudents;i++)
         {
             System.out.println("Enter Student Id : ");
-            int studid = Integer.parseInt(sc.nextLine());
-            Student findexistingStudent = Teacher.findStudentByStudentId(studentarraylistObj, studid);
+            String studname = sc.nextLine();
+            Student findexistingStudent = Teacher.findStudentByStudentName(studentarraylistObj, studname);
             if (findexistingStudent != null){
                 Course newCourse = new Course();
                 newCourse.setTeacherName(this.username);
@@ -74,7 +74,7 @@ public class Teacher extends Main{
                 findexistingStudent.studentAllCourse.add(newCourse);
             }
             else{
-                System.out.println("\n Student with "+studid+" doestn't exist");
+                System.out.println("\n Student with name : "+studname+" doestn't exist");
             }
         }
 
