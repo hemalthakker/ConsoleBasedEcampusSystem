@@ -14,7 +14,6 @@ public class Main {
             System.out.print("Enter 3 to Exit\n");
             System.out.print("Enter Your Choice : ");
             int choice = Integer.parseInt(sc.nextLine());
-
             switch (choice)
             {
                 case 1:
