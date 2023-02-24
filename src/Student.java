@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Student {
-    void studentRegistration(Scanner sc) {
-
+    void studentRegistration(Scanner sc) 
+    {
         String studentfullname;
         String studentusername, studentpassword;
 
@@ -15,7 +15,5 @@ public class Student {
 
         System.out.print("\nEnter Password : ");
         studentpassword = sc.nextLine();
-
-
-}
+    }
 }
