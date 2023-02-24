@@ -188,7 +188,7 @@ public class Teacher extends Main{
         switch(choice)
         {
             case 1:
-                courseAddUpdate(String teacherusername);
+                courseAddUpdate(teacherusername);
                 break;
             case 2:
                 marksOperations();
