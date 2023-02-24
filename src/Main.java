@@ -6,13 +6,15 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Student studentObj = new Student();
         Teacher teacherObj = new Teacher();
+
         while(true)
         {
-            System.out.println("\nEnter 1 to Register Yourself\n");
-            System.out.println("Enter 2 to Login\n");
+            System.out.print("\nEnter 1 to Register Yourself\n");
+            System.out.print("Enter 2 to Login\n");
             System.out.print("Enter 3 to Exit\n");
             System.out.print("Enter Your Choice : ");
             int choice = Integer.parseInt(sc.nextLine());
+
             switch (choice)
             {
                 case 1:
@@ -29,7 +31,7 @@ public class Main {
                             break;
                         default:
                             System.out.println("Invalid Choice");
-                            break;    
+                            break;
                     }
                     break;
 
@@ -48,7 +50,7 @@ public class Main {
                         default:
                             System.out.println("Invalid Choice");
                             break;
-                    
+
                     }
                     break;
 
