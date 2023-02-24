@@ -155,14 +155,36 @@ public class Teacher extends Main{
                             }
                         }
                     }
+                    break;
+                case 2:
                     for(Student student : studentarraylistObj)
                     {
                         for(Course course : student.studentAllCourse)
                         {
-                            System.out.println("\n\n************Marks : "+course.marks);
+                            System.out.println("\n\n Student Name : "+student.getStudentName()+"\nMarks : "+course.marks);
                         }
                     }
                     break;
+                case 3:
+                    System.out.print("\nEnter Student Name : ");
+                    String stname = sc.nextLine();
+                    Student findexistingStud = Teacher.findStudentByStudentName(studentarraylistObj, stname);
+                    if (findexistingStud != null)
+                    {
+                        System.out.println("\n Enter Course Id : ");
+                        String courseId = sc.nextLine();
+                        for(Course course : findexistingStud.studentAllCourse)
+                        {
+                            if(course.courseid.equals(courseId))
+                            {
+                                System.out.println("\n Enter Marks : ");
+                                int studmarks = Integer.parseInt(sc.nextLine());
+                                course.marks=studmarks;
+                            }
+                        }
+                    }
+                    break;
+                    
             }
         }
     }
