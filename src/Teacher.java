@@ -165,7 +165,7 @@ public class Teacher extends Main{
                             {
                                 System.out.println("\n Enter Marks : ");
                                 int studmarks = Integer.parseInt(sc.nextLine());
-                                //
+                                
                             }
                         }
                     }
