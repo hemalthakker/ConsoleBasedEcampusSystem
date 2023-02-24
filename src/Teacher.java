@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Teacher extends Main{
 
     
+    private static final Teacher NULL = null;
     int teacherid;
     private String username;
     private String password;
@@ -38,7 +39,7 @@ public class Teacher extends Main{
         return null;
     }
 
-    void addCourse()
+    void addCourse(String teacherusername)
     {
         //String courseid,coursename;
         //int teacherid,allstudents,studentid;
@@ -46,21 +47,6 @@ public class Teacher extends Main{
         System.out.print("\nEnter Course Id ");
         String courseid = sc.nextLine();
 
-        for(Teacher teacher : teacherarraylistObj)
-        {
-            for(Course course : teacher.teacherCourse)
-            {
-                if(course.courseid.equals(courseid))
-                {
-                    System.out.println("Student Id : "+student.getStudentId());
-                    System.out.println("Student Name : "+student.getStudentName());
-                    System.out.println("\n\n");
-                }
-            }
-        }
-
-
-        
 
         System.out.print("\nEnter Course Name ");
         String coursename = sc.nextLine();
@@ -94,16 +80,19 @@ public class Teacher extends Main{
         }
 
         //add course in teacher
-        Course newCourse = new Course();
-        newCourse.setTeacherName(this.username);
-        newCourse.setCourseId(courseid);
-        newCourse.setCourseName(coursename);
-        newCourse.setCourseCredit(coursecredit);
-        newCourse.setCousePassingcriteria(coursepassingcriteria);
-        teacherCourse.add(newCourse);
+        Course newObj = new Course();
+        newObj.setTeacherName(this.username);
+        newObj.setCourseId(courseid);
+        newObj.setCourseName(coursename);
+        newObj.setCourseCredit(coursecredit);
+        newObj.setCousePassingcriteria(coursepassingcriteria);
+        Teacher findexistingTeacher = Teacher.findTeacherByUsername(teacherarraylistObj, teacherusername);
+        if(findexistingTeacher!=NULL)
+        {
+            findexistingTeacher.teacherCourse.add(newObj);
+        }
 
-
-        //design
+        //design baki
         System.out.println("\n\n The List of Students enrolled in this course are\n\n");
 
         for(Student student : studentarraylistObj)
@@ -120,7 +109,21 @@ public class Teacher extends Main{
         }
     }
 
-    void courseAddUpdate()
+    void display(String teacherusername)
+    {
+        System.out.println("Displayyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy");
+
+        for(Teacher teacher : teacherarraylistObj)
+        {
+            for(Course course : teacher.teacherCourse)
+            {
+                System.out.println("Teacher Name : " + course.teachername);
+                System.out.println("Teacher Id : "+course.courseid);
+            }
+        }
+    }
+
+    void courseAddUpdate(String teacherusername)
     {
         System.out.println("Enter 1 to Add New Course");
         int choice = Integer.parseInt(sc.nextLine());
@@ -129,7 +132,10 @@ public class Teacher extends Main{
             //3 ai ek addCOurse ma nakhi didhela chuta krvana baki
 
             case 1:
-                addCourse();
+                addCourse(teacherusername);
+                break;
+            case 2:
+                display(teacherusername);
                 break;
         }
 
@@ -173,7 +179,7 @@ public class Teacher extends Main{
 
     }
 
-    void teacherMenu()
+    void teacherMenu(String teacherusername)
     {
         System.out.println("Enter 1 to Add or Update Course");
         System.out.println("Enter 2 to Add, Update, View Marks");
@@ -182,7 +188,7 @@ public class Teacher extends Main{
         switch(choice)
         {
             case 1:
-                courseAddUpdate();
+                courseAddUpdate(String teacherusername);
                 break;
             case 2:
                 marksOperations();
@@ -232,7 +238,7 @@ public class Teacher extends Main{
 
            if(teacherpassword.equals(findexistingTeacher.password))
            {
-                teacherMenu();
+                teacherMenu(teacherusername);
            }
            else{
             System.out.println("\n Invalid Password");
