@@ -9,10 +9,6 @@ public class Teacher extends Main{
     private String password;
     ArrayList<Course> teacherCourse = new ArrayList<Course>();
 
-    /*
-     Set Methods
-     */
-
     void setTeacherName(String username)
     {
         this.username=username;
@@ -23,10 +19,6 @@ public class Teacher extends Main{
         this.password=password;
     }
 
-
-    /*
-     Get Methods
-    */
     String getTeacherName()
     {
         return this.username;
@@ -63,7 +55,7 @@ public class Teacher extends Main{
 
         System.out.println("Enter Course Credit : ");
         int coursecredit = Integer.parseInt(sc.nextLine());
-        
+
         System.out.println("Enter no of students you want to add in your course : ");
         int totalstudents=Integer.parseInt(sc.nextLine());
 
@@ -85,6 +77,15 @@ public class Teacher extends Main{
                 System.out.println("\n Student with "+studid+" doestn't exist");
             }
         }
+
+        //add course in teacher
+        Course newCourse = new Course();
+        newCourse.setTeacherName(this.username);
+        newCourse.setCourseId(courseid);
+        newCourse.setCourseName(coursename);
+        newCourse.setCourseCredit(coursecredit);
+        newCourse.setCousePassingcriteria(coursepassingcriteria);
+        teacherCourse.add(newCourse);
     }
 
     void courseAddUpdate()
