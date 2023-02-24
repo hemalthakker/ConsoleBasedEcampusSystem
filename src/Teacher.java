@@ -254,11 +254,68 @@ public class Teacher extends Main{
                             }
                         }
                     }
-
                     if(!check)
                     {
                         System.out.println("Enter Valid Course Name");
-                    }                    
+                    } 
+                    break;
+
+                case 2:
+                    System.out.println("\nEnter Course Id for which you want to delete Student : ");
+                    String delcourseid = sc.nextLine();
+                    System.out.println("\nEnter Studentname to be deleted : ");
+                    String studname = sc.nextLine();
+                    boolean flagStudent=false;
+                    boolean flagCourse=false;
+
+                    for(Student student : studentarraylistObj)
+                    {
+                        if(student.getStudentName().equals(studname))
+                        {
+                            flagStudent=true;
+
+                            for(Course course : student.studentAllCourse)
+                            {
+                                if(course.courseid.equals(delcourseid))
+                                {
+                                    flagCourse=true;
+
+                                    course.courseid=null;
+                                    course.coursename=null;
+                                    course.coursecredit=0;
+                                    course.teachername=null;
+                                    course.marks=0;
+                                    course.coursepassingcriteria=0;
+                                }
+
+                                System.out.println("\n\n Remaingin Students Lists");
+                                for(Student student : studentarraylistObj)
+                                {
+                                    for(Course allcourse : student.studentAllCourse)
+                                    {
+                                        if(allcourse.courseid.equals(courseid))
+                                        {
+                                            System.out.println("Student Id : "+student.getStudentId());
+                                            System.out.println("Student Name : "+student.getStudentName());
+                                            System.out.println("\n\n");
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    if(!flagStudent)
+                    {
+                        System.out.println("Enter valid Student Name");
+                    }
+
+                    if(!flagCourse)
+                    {
+                        System.out.println("Enter valid Course Name");
+                    }
+                    break;
+
             }
         }
     }
