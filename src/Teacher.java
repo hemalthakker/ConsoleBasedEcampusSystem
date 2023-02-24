@@ -246,6 +246,8 @@ public class Teacher extends Main{
                                 System.out.println("\n Student with name : "+studname+" doestn't exist");
                             }
                         }
+                    }else{
+                        System.out.println(courseid);
                     }
 
             }
