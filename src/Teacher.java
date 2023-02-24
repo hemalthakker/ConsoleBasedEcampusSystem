@@ -5,10 +5,9 @@ public class Teacher {
     static int id=0;
     int teacherid;
     ArrayList<Course> teachercourse = new ArrayList<Course>();
-    Teacher()
-    {
+    Teacher() {
         id++;
-        teacherid=id;
+        teacherid = id;
     }
     void setTeacherid(int input_teacherid)
     {
