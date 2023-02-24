@@ -266,7 +266,6 @@ public class Teacher extends Main{
                     System.out.println("\nEnter Studentname to be deleted : ");
                     String studname = sc.nextLine();
                     boolean flagStudent=false;
-                    boolean flagCourse=false;
 
                     for(Student student : studentarraylistObj)
                     {
@@ -292,7 +291,6 @@ public class Teacher extends Main{
                                         }
                                     }
                                 }
-                            
                             }
                             else
                             {
@@ -305,13 +303,7 @@ public class Teacher extends Main{
                     {
                         System.out.println("Enter valid Student Name");
                     }
-
-                    if(!flagCourse)
-                    {
-                        System.out.println("Enter valid Course Name");
-                    }
                     break;
-
             }
         }
     }
