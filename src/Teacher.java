@@ -157,11 +157,16 @@ public class Teacher extends Main{
                     }
                     break;
                 case 2:
+                    System.out.println("\n Enter Course Id : ");
+                    String courseId = sc.nextLine();
                     for(Student student : studentarraylistObj)
                     {
                         for(Course course : student.studentAllCourse)
                         {
-                            System.out.println("\n\n Student Name : "+student.getStudentName()+"\nMarks : "+course.marks);
+                            if(course.courseid.equals(courseId))
+                            {
+                                System.out.println("\n\n Student Name : "+student.getStudentName()+"\nMarks : "+course.marks);
+                            }
                         }
                     }
                     break;
@@ -191,7 +196,12 @@ public class Teacher extends Main{
 
     void studentListUpdate()
     {
-
+        while(true)
+        {
+            System.out.println("Enter 1 to Add Student");
+            System.out.println("Enter 2 to Delete Student");
+            int choice
+        }
     }
 
     void teacherMenu(String teacherusername)
