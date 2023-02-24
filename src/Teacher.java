@@ -177,10 +177,10 @@ public class Teacher extends Main{
                     if (findexistingStud != null)
                     {
                         System.out.println("\n Enter Course Id : ");
-                        String courseId = sc.nextLine();
+                        String courseid = sc.nextLine();
                         for(Course course : findexistingStud.studentAllCourse)
                         {
-                            if(course.courseid.equals(courseId))
+                            if(course.courseid.equals(courseid))
                             {
                                 System.out.println("\n Enter Marks : ");
                                 int studmarks = Integer.parseInt(sc.nextLine());
@@ -200,7 +200,39 @@ public class Teacher extends Main{
         {
             System.out.println("Enter 1 to Add Student");
             System.out.println("Enter 2 to Delete Student");
-            int choice
+            int choice = Integer.parseInt(sc.nextLine());
+            switch(choice)
+            {
+                case 1:
+                    System.out.println("Enter Course Id : ");
+                    String courseid = sc.nextLine();
+
+                    
+
+                    System.out.println("\nEnter no of students you want to add in your course : ");
+                    int totalstudents=Integer.parseInt(sc.nextLine());
+        
+                    for(int i=0;i<totalstudents;i++)
+                    {
+                        System.out.println("Enter Student Name : ");
+                        String studname = sc.nextLine();
+                        Student findexistingStudent = Teacher.findStudentByStudentName(studentarraylistObj, studname);
+                        if (findexistingStudent != null)
+                        {
+                            Course newCourse = new Course();
+                            newCourse.setTeacherName(this.username);
+                            newCourse.setCourseId(courseid);
+                            newCourse.setCourseName(coursename);
+                            newCourse.setCourseCredit(coursecredit);
+                        newCourse.setCousePassingcriteria(coursepassingcriteria);
+                        findexistingStudent.studentAllCourse.add(newCourse);
+                    }
+                    else{
+                        System.out.println("\n Student with name : "+studname+" doestn't exist");
+                    }
+                }
+
+            }
         }
     }
 
