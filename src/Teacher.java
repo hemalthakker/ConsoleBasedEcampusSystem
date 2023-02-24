@@ -63,9 +63,7 @@ public class Teacher extends Main{
 
         System.out.println("Enter Course Credit : ");
         int coursecredit = Integer.parseInt(sc.nextLine());
-
-
-
+        
         System.out.println("Enter no of students you want to add in your course : ");
         int totalstudents=Integer.parseInt(sc.nextLine());
 
@@ -87,10 +85,6 @@ public class Teacher extends Main{
                 System.out.println("\n Student with "+studid+" doestn't exist");
             }
         }
-
-
-
-
     }
 
     void courseAddUpdate()
