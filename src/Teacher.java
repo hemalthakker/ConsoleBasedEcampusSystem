@@ -2,8 +2,22 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Teacher {
+    static int id=0;
     int teacherid;
     ArrayList<Course> teachercourse = new ArrayList<Course>();
+    Teacher()
+    {
+        id++;
+        teacherid=id;
+    }
+    void setTeacherid(int input_teacherid)
+    {
+        this.teacherid=input_teacherid;
+    }
+    int getTeacherid()
+    {
+        return teacherid;
+    }
 
     void teacher(Scanner sc)
     {
