@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Teacher {
+public class Teacher extends Main{
 
     static int id=0;
     int teacherid;
@@ -38,6 +38,16 @@ public class Teacher {
             if (teacher.getTeacherName().equals(input_username))
                 return teacher;
         return null;
+    }
+
+    void teacherMenu(Scanner sc)
+    {
+        System.out.println("Enter 1 to Add or Update Course");
+        System.out.println("Enter 2 to Add, Update, View Marks");
+        System.out.println("Enter 3 to Add or Delete Student");
+        int choice = Integer.parseInt(sc.nextLine());
+        
+
     }
 
     void teacher(Scanner sc)
@@ -96,7 +106,7 @@ public class Teacher {
 
            if(teacherpassword.equals(findexistingTeacher.password))
            {
-                
+                teacherMenu(sc);
            }
            else{
             System.out.println("\n Invalid Password");
