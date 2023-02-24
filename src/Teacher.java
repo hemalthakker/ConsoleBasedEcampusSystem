@@ -7,7 +7,6 @@ public class Teacher extends Main{
     int teacherid;
     private String username;
     private String password;
-
     ArrayList<Course> teachercourse = new ArrayList<Course>();
 
     /*
@@ -33,29 +32,29 @@ public class Teacher extends Main{
         return this.username;
     }
 
-    static Teacher findTeacherByUsername(ArrayList<Teacher>teachers, String input_username){
+    static Teacher findTeacherByUsername(ArrayList<Teacher>teachers,String input_username){
         for (Teacher teacher: teachers)
             if (teacher.getTeacherName().equals(input_username))
                 return teacher;
         return null;
     }
 
-    void courseAddUpdate(Scanner sc)
+    void courseAddUpdate()
+    {
+        
+    }
+
+    void marksOperations()
     {
 
     }
 
-    void marksOperations(Scanner sc)
+    void studentListUpdate()
     {
 
     }
 
-    void studentListUpdate(Scanner sc)
-    {
-
-    }
-
-    void teacherMenu(Scanner sc)
+    void teacherMenu()
     {
         System.out.println("Enter 1 to Add or Update Course");
         System.out.println("Enter 2 to Add, Update, View Marks");
@@ -64,13 +63,13 @@ public class Teacher extends Main{
         switch(choice)
         {
             case 1:
-                courseAddUpdate(sc);
+                courseAddUpdate();
                 break;
             case 2:
-                marksOperations(sc);
+                marksOperations();
                 break;
             case 3:
-                studentListUpdate(sc);
+                studentListUpdate();
                 break;
             case 4:
                 System.exit(0);
@@ -80,7 +79,7 @@ public class Teacher extends Main{
         }
     }
 
-    void teacher(Scanner sc)
+    void teacher()
     {
         String courseid,coursename;
         int teacherid,allstudents,studentid;
@@ -102,7 +101,7 @@ public class Teacher extends Main{
 
     }
 
-    void teacherRegistration(Scanner sc,ArrayList<Teacher>teacherarraylistObj) 
+    void teacherRegistration() 
     {
         System.out.print("\nEnter UserName : ");
         username = sc.nextLine();
@@ -123,7 +122,7 @@ public class Teacher extends Main{
         }
     }
 
-    void teacherSignin(Scanner sc,ArrayList<Teacher>teacherarraylistObj)
+    void teacherSignin()
     {
         String teacherusername, teacherpassword;
         System.out.print("\nEnter Teacher UserName : ");
@@ -136,7 +135,7 @@ public class Teacher extends Main{
 
            if(teacherpassword.equals(findexistingTeacher.password))
            {
-                teacherMenu(sc);
+                teacherMenu();
            }
            else{
             System.out.println("\n Invalid Password");

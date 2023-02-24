@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Student {
+public class Student extends Main {
     static int id=0;
     int studentid;
     String username;
@@ -41,7 +41,7 @@ public class Student {
         return null;
     }
 
-    void studentinput(Scanner sc)
+    void studentinput()
     {
         String studentid;
         String studentname;
@@ -51,7 +51,7 @@ public class Student {
         studentname = sc.nextLine();
     }
 
-    void studentRegistration(Scanner sc,ArrayList<Student>studentarraylistObj)
+    void studentRegistration()
     {
         System.out.print("\nEnter UserName : ");
         username = sc.nextLine();
@@ -80,7 +80,7 @@ public class Student {
         }
     }
 
-    void studentSignin(Scanner sc,ArrayList<Student>studentarraylistObj)
+    void studentSignin()
     {
         String studentusername, studentpassword;
         System.out.print("\nEnter Student UserName : ");

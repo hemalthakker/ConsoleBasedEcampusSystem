@@ -4,12 +4,13 @@ import static java.lang.System.exit;
 
 public class Main {
 
-    private static ArrayList<Teacher> teacherarraylistObj = new ArrayList<Teacher>();
-    private static ArrayList<Course> coursearraylistObj = new ArrayList<Course>();
-    private static ArrayList<Student> studentarraylistObj = new ArrayList<Student>();
+    protected static ArrayList<Teacher> teacherarraylistObj = new ArrayList<Teacher>();
+    protected static ArrayList<Course> coursearraylistObj = new ArrayList<Course>();
+    protected static ArrayList<Student> studentarraylistObj = new ArrayList<Student>();
+    protected static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        
         Student studentObj = new Student();
         Teacher teacherObj = new Teacher();
 
@@ -30,10 +31,10 @@ public class Main {
                     switch (choiceRegister)
                     {
                         case 1:
-                            studentObj.studentRegistration(sc,studentarraylistObj);
+                            studentObj.studentRegistration();
                             break;
                         case 2:
-                            teacherObj.teacherRegistration(sc,teacherarraylistObj);
+                            teacherObj.teacherRegistration();
                             break;
                         default:
                             System.out.println("Invalid Choice");
@@ -48,10 +49,10 @@ public class Main {
                     switch (choiceSignin)
                     {
                         case 1:
-                            studentObj.studentSignin(sc,studentarraylistObj);
+                            studentObj.studentSignin();
                             break;
                         case 2:
-                            teacherObj.teacherSignin(sc,teacherarraylistObj);
+                            teacherObj.teacherSignin();
                             break;
                         default:
                             System.out.println("Invalid Choice");
