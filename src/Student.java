@@ -18,4 +18,13 @@ public class Student {
 
 
 }
+    void studentSignin(Scanner sc) {
+        String studentusername, studentpassword;
+
+        System.out.print("\nEnter Student UserName : ");
+        studentusername = sc.nextLine();
+
+        System.out.print("\nEnter Password : ");
+        studentpassword = sc.nextLine();
+    }
 }
