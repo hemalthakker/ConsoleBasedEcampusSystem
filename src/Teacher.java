@@ -46,6 +46,22 @@ public class Teacher extends Main{
         System.out.print("\nEnter Course Id ");
         String courseid = sc.nextLine();
 
+        for(Teacher teacher : teacherarraylistObj)
+        {
+            for(Course course : teacher.teacherCourse)
+            {
+                if(course.courseid.equals(courseid))
+                {
+                    System.out.println("Student Id : "+student.getStudentId());
+                    System.out.println("Student Name : "+student.getStudentName());
+                    System.out.println("\n\n");
+                }
+            }
+        }
+
+
+        
+
         System.out.print("\nEnter Course Name ");
         String coursename = sc.nextLine();
 
@@ -94,7 +110,7 @@ public class Teacher extends Main{
         {
             for(Course course : student.studentAllCourse)
             {
-                if(course.courseid==courseid)
+                if(course.courseid.equals(courseid))
                 {
                     System.out.println("Student Id : "+student.getStudentId());
                     System.out.println("Student Name : "+student.getStudentName());
