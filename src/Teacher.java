@@ -24,21 +24,13 @@ public class Teacher extends Main{
         return this.username;
     }
 
-    static Teacher findTeacherByUsername(ArrayList<Teacher>teachers,String input_username){
-        for (Teacher teacher: teachers)
-            if (teacher.getTeacherName().equals(input_username))
-                return teacher;
-        return null;
-    }
-
-    static Student findStudentByStudentName(ArrayList<Student> students, String input_username){
+    static Student findStudentByStudentId(ArrayList<Student> students, int input_studentid){
         for (Student student: students)
-            if (student.getStudentName().equals(input_username))
+            if (student.getStudentId()==input_studentid)
                 return student;
         return null;
     }
-
-
+    
     void addCourse()
     {
         //String courseid,coursename;

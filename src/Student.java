@@ -38,9 +38,10 @@ public class Student extends Main {
         return this.studentid;
     }
 
-    static Student findStudentByStudentId(ArrayList<Student> students, int input_studentid){
+
+    static Student findStudentByStudentName(ArrayList<Student> students, String input_username){
         for (Student student: students)
-            if (student.getStudentId()==input_studentid)
+            if (student.getStudentName().equals(input_username))
                 return student;
         return null;
     }
