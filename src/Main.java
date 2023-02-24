@@ -9,7 +9,7 @@ public class Main {
         while(true)
         {
             System.out.println("\nEnter 1 to Register Yourself\n");
-            System.out.print("Enter 2 to Login\n");
+            System.out.println("Enter 2 to Login\n");
             System.out.print("Enter 3 to Exit\n");
             System.out.print("Enter Your Choice : ");
             int choice = Integer.parseInt(sc.nextLine());

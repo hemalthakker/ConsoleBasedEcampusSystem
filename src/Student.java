@@ -4,6 +4,7 @@ public class Student {
     void studentRegistration(Scanner sc) 
     {
         String studentfullname;
+       
         String studentusername, studentpassword;
 
         System.out.print("\nEnter Full Name of Student : ");
