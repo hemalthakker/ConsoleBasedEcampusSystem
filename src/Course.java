@@ -2,8 +2,8 @@ public class Course extends Main {
     String teachername;
     String courseid;
     String coursename;
-    String coursecredit;
-    String coursepassingcriteria;
+    int coursecredit;
+    int coursepassingcriteria;
     int marks;
 
     void setCourseId(String courseid)
@@ -16,14 +16,19 @@ public class Course extends Main {
         this.coursename=coursename;
     }
 
-    void setCourseCredit(String coursecredit)
+    void setCourseCredit(int coursecredit)
     {
         this.coursecredit=coursecredit;
     }
 
-    void setCousePassingcriteria(String coursecriteria)
+    void setCousePassingcriteria(int coursecriteria)
     {
         this.coursecredit=coursecriteria;
+    }
+
+    void setMarks(int marks)
+    {
+        this.marks=marks;
     }
 
     String checkByTeacherName()
@@ -34,6 +39,11 @@ public class Course extends Main {
     String checkByCourseId()
     {
         return this.courseid;
+    }
+
+    int getMarks()
+    {
+        return this.marks;
     }
     
 

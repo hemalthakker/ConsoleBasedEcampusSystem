@@ -39,12 +39,45 @@ public class Teacher extends Main{
         return null;
     }
 
+    static Student findStudentByStudentName(ArrayList<Student> students, String input_username){
+        for (Student student: students)
+            if (student.getStudentName().equals(input_username))
+                return student;
+        return null;
+    }
+
+
     void addCourse()
     {
-        int courseId = Integer.parseInt(sc.nextLine());
-        System.out.println("Enter Course Id : ");
+        //String courseid,coursename;
+        //int teacherid,allstudents,studentid;
 
+        System.out.print("Enter Course Id ");
+        String courseid = sc.nextLine();
+
+        System.out.print("Enter Course Name ");
+        String coursename = sc.nextLine();
+
+        System.out.println("Enter Course Passing Criteria : ");
         
+
+        System.out.println("Enter no of students you want to add in your course : ");
+        int totalstudents=Integer.parseInt(sc.nextLine());
+
+        for(int i=0;i<totalstudents;i++)
+        {
+            System.out.println("Enter Student Id : ");
+            int studid = Integer.parseInt(sc.nextLine());
+            Student findexistingStudent = Student.findStudentByStudentId(studentarraylistObj, studid);
+            if (findexistingStudent != null){
+
+            }
+
+
+        }
+
+
+
 
     }
 
@@ -94,28 +127,6 @@ public class Teacher extends Main{
             default:
                 System.out.println("\n Enter Valid Choice ");
         }
-    }
-
-    void teacher()
-    {
-        String courseid,coursename;
-        int teacherid,allstudents,studentid;
-
-        System.out.print("Enter course id ");
-        courseid = sc.nextLine();
-
-        System.out.print("Enter course name ");
-        coursename = sc.nextLine();
-
-        System.out.print("Enter teacher id ");
-        teacherid = Integer.parseInt(sc.nextLine());
-
-        System.out.print("How many student you teach ");
-        allstudents = Integer.parseInt(sc.nextLine());
-
-        System.out.print("Enter all student id ");
-        studentid =  Integer.parseInt(sc.nextLine());
-
     }
 
     void teacherRegistration() 
