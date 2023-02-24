@@ -7,15 +7,20 @@ public class Student {
     double percentage;
     String overallgrade;
     ArrayList<Course> studentAllCourse=new ArrayList<Course>();
+    void studentinput(Scanner sc)
+    {
+        String studentid;
+        String studentname;
+        System.out.print("Enter Student id ");
+        studentid = sc.nextLine();
+        System.out.print("Enter Student name ");
+        studentname = sc.nextLine();
+    }
 
     void studentRegistration(Scanner sc)
     {
         String studentfullname;
         String studentusername, studentpassword;
-
-        System.out.print("\nEnter Full Name of Student : ");
-        studentfullname = sc.nextLine();
-
 
         System.out.print("\nEnter UserName : ");
         studentusername = sc.nextLine();

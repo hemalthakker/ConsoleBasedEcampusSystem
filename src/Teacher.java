@@ -7,16 +7,21 @@ public class Teacher {
 
     void teacher(Scanner sc)
     {
+        String courseid;
+        String coursename;
+        int teacherid;
+        int allstudents;
+        int studentid;
         System.out.print("Enter course id ");
-        String courseid = sc.nextLine();
+        courseid = sc.nextLine();
         System.out.print("Enter course name ");
-        String coursename = sc.nextLine();
+        coursename = sc.nextLine();
         System.out.print("Enter teacher id ");
-        int teacherid = Integer.parseInt(sc.nextLine());
+        teacherid = Integer.parseInt(sc.nextLine());
         System.out.print("How many student you teach ");
-        int allstudents = Integer.parseInt(sc.nextLine());
-        System.out.print("Enter student id ");
-        int studentid =  Integer.parseInt(sc.nextLine());
+        allstudents = Integer.parseInt(sc.nextLine());
+        System.out.print("Enter all student id ");
+        studentid =  Integer.parseInt(sc.nextLine());
 
     }
 
