@@ -10,20 +10,9 @@ public class Teacher {
 
     ArrayList<Course> teachercourse = new ArrayList<Course>();
 
-    Teacher() 
-    {
-        id++;
-        teacherid = id;
-    }
-
     /*
      Set Methods
      */
-
-    void setTeacherid(int input_teacherid)
-    {
-        this.teacherid=input_teacherid;
-    }
 
     void setTeacherName(String username)
     {
@@ -39,20 +28,14 @@ public class Teacher {
     /*
      Get Methods
     */
-
-    int getTeacherid()
-    {
-        return teacherid;
-    }
-
     String getTeacherName()
     {
         return this.username;
     }
 
-    static Teacher findTeacherByTeacherId(ArrayList<Teacher>teachers, int input_teacherid){
+    static Teacher findTeacherByUsername(ArrayList<Teacher>teachers, String input_username){
         for (Teacher teacher: teachers)
-            if (teacher.getTeacherid()==input_teacherid)
+            if (teacher.getTeacherName().equals(input_username))
                 return teacher;
         return null;
     }
@@ -87,7 +70,7 @@ public class Teacher {
         System.out.print("\nEnter Password : ");
         password = sc.nextLine();
 
-        Teacher findexistingTeacher = Teacher.findTeacherByTeacherId(teacherarraylistObj, teacherid);
+        Teacher findexistingTeacher = Teacher.findTeacherByUsername(teacherarraylistObj, username);
         if (findexistingTeacher != null){
             System.out.println("--> Teacher already exists!");
         }
@@ -100,12 +83,27 @@ public class Teacher {
         }
     }
 
-    void teacherSignin(Scanner sc)
+    void teacherSignin(Scanner sc,ArrayList<Teacher>teacherarraylistObj)
     {
         String teacherusername, teacherpassword;
         System.out.print("\nEnter Teacher UserName : ");
         teacherusername = sc.nextLine();
-        System.out.print("\nEnter Password : ");
-        teacherpassword = sc.nextLine();
+        Teacher findexistingTeacher = Teacher.findTeacherByUsername(teacherarraylistObj, teacherusername);
+        if (findexistingTeacher != null)
+        {
+            System.out.print("\nEnter Password : ");
+            teacherpassword = sc.nextLine();
+
+           if(teacherpassword.equals(findexistingTeacher.password))
+           {
+                System.out.println("\n Redirect karo Login Ma");
+           }
+           else{
+            System.out.println("\n Invalid Password");
+           }
+        }else{
+            System.out.println("\n Invalid Username");
+            System.out.println("\n Please register first if not registered then Login");
+        }
     }
 }
