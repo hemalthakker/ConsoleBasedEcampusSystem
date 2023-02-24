@@ -274,33 +274,29 @@ public class Teacher extends Main{
                         {
                             flagStudent=true;
 
-                            for(Course course : student.studentAllCourse)
+                            int index = student.studentAllCourse.indexOf(delcourseid);
+                            
+                            if(index!=-1)
                             {
-                                if(course.courseid.equals(delcourseid))
+                                student.studentAllCourse.remove(index);
+                                System.out.println("\n\n Remaining Students Lists");
+                                for(Student students : studentarraylistObj)
                                 {
-                                    flagCourse=true;
-
-                                    course.courseid=null;
-                                    course.coursename=null;
-                                    course.coursecredit=0;
-                                    course.teachername=null;
-                                    course.marks=0;
-                                    course.coursepassingcriteria=0;
-                                }
-
-                                System.out.println("\n\n Remaingin Students Lists");
-                                for(Student student : studentarraylistObj)
-                                {
-                                    for(Course allcourse : student.studentAllCourse)
+                                    for(Course allcourse : students.studentAllCourse)
                                     {
-                                        if(allcourse.courseid.equals(courseid))
+                                        if(allcourse.courseid.equals(delcourseid))
                                         {
-                                            System.out.println("Student Id : "+student.getStudentId());
-                                            System.out.println("Student Name : "+student.getStudentName());
+                                            System.out.println("Student Id : "+students.getStudentId());
+                                            System.out.println("Student Name : "+students.getStudentName());
                                             System.out.println("\n\n");
                                         }
                                     }
                                 }
+                            
+                            }
+                            else
+                            {
+                                System.out.println("Invalid Course");
                             }
                         }
                     }
