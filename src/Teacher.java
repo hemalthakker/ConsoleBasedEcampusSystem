@@ -207,7 +207,7 @@ public class Teacher extends Main{
                     System.out.println("Enter Course Id : ");
                     String courseid = sc.nextLine();
 
-                    Course storeCourse;
+                    
                     boolean check=false;
 
                     for(Teacher teacher : teacherarraylistObj)
@@ -217,39 +217,36 @@ public class Teacher extends Main{
                             if(course.courseid.equals(courseid))
                             {
                                 check=true;
-                                storeCourse=course;
-                            }
-                        }
-                    }
-
-                    if(check)
-                    {
-                        System.out.println("\nEnter no of students you want to add in your course : ");
-                        int totalstudents=Integer.parseInt(sc.nextLine());
+                                System.out.println("\nEnter no of students you want to add in your course : ");
+                                int totalstudents=Integer.parseInt(sc.nextLine());
         
-                        for(int i=0;i<totalstudents;i++)
-                        {
-                            System.out.println("Enter Student Name : ");
-                            String studname = sc.nextLine();
-                            Student findexistingStudent = Teacher.findStudentByStudentName(studentarraylistObj, studname);
-                            if (findexistingStudent != null)
-                            {
-                                Course newCourse = new Course();
-                                newCourse.setTeacherName(storeCourse.teachername);
-                                newCourse.setCourseId(storeCourse.courseid);
-                                newCourse.setCourseName(storeCourse.coursename);
-                                newCourse.setCourseCredit(storeCourse.coursecredit);
-                                newCourse.setCousePassingcriteria(storeCourse.coursepassingcriteria);
-                                findexistingStudent.studentAllCourse.add(newCourse);
-                            }
-                            else{
-                                System.out.println("\n Student with name : "+studname+" doestn't exist");
+                                for(int i=0;i<totalstudents;i++)
+                                {
+                                    System.out.println("Enter Student Name : ");
+                                    String studname = sc.nextLine();
+                                    Student findexistingStudent = Teacher.findStudentByStudentName(studentarraylistObj, studname);
+                                    if (findexistingStudent != null)
+                                    {
+                                        Course newCourse = new Course();
+                                        newCourse.setTeacherName(course.teachername);
+                                        newCourse.setCourseId(course.courseid);
+                                        newCourse.setCourseName(course.coursename);
+                                        newCourse.setCourseCredit(course.coursecredit);
+                                        newCourse.setCousePassingcriteria(course.coursepassingcriteria);
+                                        findexistingStudent.studentAllCourse.add(newCourse);
+                                    }
+                                    else{
+                                        System.out.println("\n Student with name : "+studname+" doestn't exist");
+                                    }
+                                }
                             }
                         }
-                    }else{
-                        System.out.println(courseid);
                     }
 
+                    if(!check)
+                    {
+                        System.out.println("Enter Valid Course Name");
+                    }                    
             }
         }
     }
