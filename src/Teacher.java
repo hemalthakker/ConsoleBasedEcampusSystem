@@ -294,6 +294,7 @@ public class Teacher extends Main{
                             }
                             else
                             {
+                                System.out.println("Index : "+index);
                                 System.out.println("Invalid Course");
                             }
                         }
