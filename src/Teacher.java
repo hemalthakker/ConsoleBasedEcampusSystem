@@ -6,9 +6,6 @@ public class Teacher {
     ArrayList<Course> teachercourse = new ArrayList<Course>();
 
 
-
-
-
     void teacherRegistration(Scanner sc) {
 
         String teacherfullname;

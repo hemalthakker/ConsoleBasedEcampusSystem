@@ -6,7 +6,7 @@ public class Student {
     String studentname;
     double percentage;
     String overallgrade;
-    ArrayList<Course> stucourses=new ArrayList<Course>();
+    ArrayList<Course> studentallcourse=new ArrayList<Course>();
 
 
 
