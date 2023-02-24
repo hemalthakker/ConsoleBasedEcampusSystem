@@ -19,7 +19,6 @@ public class Teacher {
     void teacherSignin(Scanner sc)
     {
         String teacherusername, teacherpassword;
-<<<<<<< HEAD
 
         System.out.print("\nEnter Teacher UserName : ");
         teacherusername = sc.nextLine();
