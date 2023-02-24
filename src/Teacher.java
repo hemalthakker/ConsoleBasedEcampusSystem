@@ -26,6 +26,4 @@ public class Teacher {
         System.out.print("\nEnter Password : ");
         teacherpassword = sc.nextLine();
     }
-
-
 }
