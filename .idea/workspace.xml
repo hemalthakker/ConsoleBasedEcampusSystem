@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="115549c6-f69e-41ae-a73d-b08e88658cc8" name="Changes" comment="" />
+    <list default="true" id="115549c6-f69e-41ae-a73d-b08e88658cc8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Teacher.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +35,18 @@
       <option name="presentableId" value="Default" />
       <updated>1677244339290</updated>
     </task>
+    <task id="LOCAL-00001" summary="Main">
+      <created>1677244435865</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677244435865</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main" />
   </component>
 </project>
