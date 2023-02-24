@@ -123,7 +123,32 @@ public class Teacher extends Main{
     {
         while(true)
         {
-            System.out.println(password);
+            System.out.println("Enter 1 to Add Mark of A Student");
+            System.out.println("Enter 2 to View Mark of A Student");
+            System.out.println("Enter 3 to Update Mark of A Student");
+            int choice = Integer.parseInt(sc.nextLine());
+            switch(choice)
+            {
+                case 1:
+                    System.out.print("Enter Student Name : ");
+                    String studname = sc.nextLine();
+                    Student findexistingStudent = Teacher.findStudentByStudentName(studentarraylistObj, studname);
+                    if (findexistingStudent != null)
+                    {
+                        System.out.println("\n Enter Course Id : ");
+                        String courseId = sc.nextLine();
+                        for(Course course : findexistingStudent.studentAllCourse)
+                        {
+                            if(course.courseid.equals(courseId))
+                            {
+                                System.out.println("\n Enter Marks : ");
+                                int studmarks = Integer.parseInt(sc.nextLine());
+                                //
+                            }
+                        }
+                    }
+
+            }
         }
     }
 
