@@ -18,5 +18,16 @@ public class Teacher {
 
 
     }
+    void teacherSignin(Scanner sc)
+    {
+        String teacherusername, teacherpassword;
+
+        System.out.print("\nEnter Teacher UserName : ");
+        teacherusername = sc.nextLine();
+
+        System.out.print("\nEnter Password : ");
+        teacherpassword = sc.nextLine();
+    }
+
 
 }
