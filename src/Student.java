@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Student extends Main {
-    static int id=0;
+    static int id=-1;
     int studentid;
     String username;
     String password;
