@@ -96,7 +96,7 @@ public class Teacher {
 
            if(teacherpassword.equals(findexistingTeacher.password))
            {
-                System.out.println("\n Redirect karo Login Ma");
+                
            }
            else{
             System.out.println("\n Invalid Password");
