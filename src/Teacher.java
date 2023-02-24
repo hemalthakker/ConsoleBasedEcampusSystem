@@ -75,15 +75,17 @@ public class Teacher extends Main{
             int studid = Integer.parseInt(sc.nextLine());
             Student findexistingStudent = Student.findStudentByStudentId(studentarraylistObj, studid);
             if (findexistingStudent != null){
-
                 Course newCourse = new Course();
+                newCourse.setTeacherName(this.username);
                 newCourse.setCourseId(courseid);
                 newCourse.setCourseName(coursename);
-                newCourse.setCourseCredit();
-
+                newCourse.setCourseCredit(coursecredit);
+                newCourse.setCousePassingcriteria(coursepassingcriteria);
+                findexistingStudent.studentAllCourse.add(newCourse);
             }
-
-
+            else{
+                System.out.println("\n Student with "+studid+" doestn't exist");
+            }
         }
 
 

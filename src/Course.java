@@ -6,6 +6,11 @@ public class Course extends Main {
     int coursepassingcriteria;
     int marks;
 
+    void setTeacherName(String teachername)
+    {
+        this.teachername=teachername;
+    }
+
     void setCourseId(String courseid)
     {
         this.courseid=courseid;
