@@ -31,6 +31,7 @@ public class Main {
                             System.out.println("Invalid Choice");
                             break;    
                     }
+                    break;
 
                 case 2:
                     System.out.println("Enter 1 to Register Yourself as Student");
@@ -49,9 +50,11 @@ public class Main {
                             break;
                     
                     }
+                    break;
 
                 case 3:
                     System.exit(0);
+                    break;
             }
         }
     }

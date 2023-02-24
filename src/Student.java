@@ -12,9 +12,11 @@ public class Student {
         studentusername = sc.nextLine();
         System.out.print("\nEnter Password : ");
         studentpassword = sc.nextLine();
+<<<<<<< HEAD
+=======
+
 
 }
-   
     void studentSignin(Scanner sc) {
         String studentusername, studentpassword;
 
