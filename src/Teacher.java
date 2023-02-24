@@ -3,11 +3,11 @@ import java.util.Scanner;
 
 public class Teacher extends Main{
 
-    static int id=0;
+    
     int teacherid;
     private String username;
     private String password;
-    ArrayList<Course> teachercourse = new ArrayList<Course>();
+    ArrayList<Course> teacherCourse = new ArrayList<Course>();
 
     /*
      Set Methods
@@ -39,9 +39,25 @@ public class Teacher extends Main{
         return null;
     }
 
+    void addCourse()
+    {
+        int courseId = Integer.parseInt(sc.nextLine());
+        System.out.println("Enter Course Id : ");
+        
+
+    }
+
     void courseAddUpdate()
     {
-        
+        System.out.println("Enter 1 to Add New Course");
+        int choice = Integer.parseInt(sc.nextLine());
+        switch(choice)
+        {
+            case 1:
+                addCourse();
+                break;
+        }
+
     }
 
     void marksOperations()
