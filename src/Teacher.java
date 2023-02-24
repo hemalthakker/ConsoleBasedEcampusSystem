@@ -1,6 +1,14 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Teacher {
+    int teacherid;
+    ArrayList<Course> teachercourse = new ArrayList<Course>();
+
+
+
+
+
     void teacherRegistration(Scanner sc) {
 
         String teacherfullname;

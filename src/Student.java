@@ -1,6 +1,19 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Student {
+    int studentid;
+    String studentname;
+    double percentage;
+    String overallgrade;
+    ArrayList<Course> stucourses=new ArrayList<Course>();
+
+
+
+
+
+
+
     void studentRegistration(Scanner sc)
     {
         String studentfullname;

@@ -1,7 +1,17 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import static java.lang.System.exit;
 
 public class Main {
+
+
+    ArrayList<Teacher> teacherarraylistObj = new ArrayList<Teacher>();
+    ArrayList<Course> coursearraylistObj = new ArrayList<Course>();
+    ArrayList<Student> studenttudentarraylistObj = new ArrayList<Student>();
+
+
+
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Student studentObj = new Student();
