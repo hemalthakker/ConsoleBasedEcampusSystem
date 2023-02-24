@@ -4,23 +4,39 @@ import java.util.Scanner;
 public class Student {
     static int id=0;
     int studentid;
-    String studentname;
+    String username;
+    String password;
     double percentage;
     String overallgrade;
     ArrayList<Course> studentAllCourse=new ArrayList<Course>();
+
+
+    void setStudentName(String username)
+    {
+        this.username=username;
+    }
+
+    void setStudentPassword(String password)
+    {
+        this.password=password;
+    }
 
     Student(){
         id++;
         studentid=id;
     }
 
-    int getStudentId(){
-        return this.studentid;
+    String getStudentName(){
+        return this.username;
     }
 
-    static Student getStudentId(ArrayList<Student> students, int input_studentid){
+    String getStudentPassword(){
+        return this.password;
+    }
+
+    static Student findStudentByStudentName(ArrayList<Student> students, String input_username){
         for (Student student: students)
-            if (student.getStudentId()==input_studentid)
+            if (student.getStudentName().equals(input_username))
                 return student;
         return null;
     }
@@ -35,22 +51,56 @@ public class Student {
         studentname = sc.nextLine();
     }
 
-    void studentRegistration(Scanner sc)
+    void studentRegistration(Scanner sc,ArrayList<Student>studentarraylistObj)
     {
-        String studentfullname;
-        String studentusername, studentpassword;
         System.out.print("\nEnter UserName : ");
-        studentusername = sc.nextLine();
+        username = sc.nextLine();
+
         System.out.print("\nEnter Password : ");
-        studentpassword = sc.nextLine();
+        password = sc.nextLine();
+
+        Student findexistingStudent = Student.findStudentByStudentName(studentarraylistObj, username);
+        if (findexistingStudent != null){
+            System.out.println("Student Already Exists");
+        }
+        else {
+            Student newStudent = new Student();
+            newStudent.setStudentName(username);
+            newStudent.setStudentPassword(password);
+            studentarraylistObj.add(newStudent);
+            int len = newStudent.getStudentPassword().length();
+            String asterisk="*";
+            for(int i=1;i<len;i++)
+            {
+                asterisk+='*';
+            }
+            System.out.println("Student Name : " + newStudent.getStudentName());
+            System.out.println("Student Password : " + asterisk);
+            System.out.println("Successfully Registered");
+        }
     }
 
-    void studentSignin(Scanner sc)
+    void studentSignin(Scanner sc,ArrayList<Student>studentarraylistObj)
     {
         String studentusername, studentpassword;
         System.out.print("\nEnter Student UserName : ");
         studentusername = sc.nextLine();
-        System.out.print("\nEnter Password : ");
-        studentpassword = sc.nextLine();
+
+        Student findexistingStudent = Student.findStudentByStudentName(studentarraylistObj, username);
+        if (findexistingStudent != null)
+        {
+            System.out.print("\nEnter Password : ");
+            studentpassword = sc.nextLine();
+
+           if(studentpassword.equals(findexistingStudent.password))
+           {
+                System.out.println("\n Redirect karo Login Ma");
+           }
+           else{
+            System.out.println("\n Invalid Password");
+           }
+        }else{
+            System.out.println("\n Invalid User");
+        }
     }
 }
