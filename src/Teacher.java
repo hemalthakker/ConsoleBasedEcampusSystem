@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Teacher extends Main{
 
-    
+
     private static final Teacher NULL = null;
     int teacherid;
     private String username;
@@ -109,11 +109,12 @@ public class Teacher extends Main{
         }
     }
 
-    
+
 
     void courseAddUpdate(String teacherusername)
     {
         System.out.println("Enter 1 to Add New Course");
+        System.out.println("Enter 2 to main menu ");
         int choice = Integer.parseInt(sc.nextLine());
         switch(choice)
         {
@@ -122,6 +123,8 @@ public class Teacher extends Main{
             case 1:
                 addCourse(teacherusername);
                 break;
+            case 2:
+                return;
 
         }
 
@@ -134,6 +137,7 @@ public class Teacher extends Main{
             System.out.println("Enter 1 to Add Mark of A Student");
             System.out.println("Enter 2 to View Mark of A Student");
             System.out.println("Enter 3 to Update Mark of A Student");
+            System.out.println("Enter 4 to main menu");
             int choice = Integer.parseInt(sc.nextLine());
             switch(choice)
             {
@@ -152,6 +156,8 @@ public class Teacher extends Main{
                                 System.out.println("\n Enter Marks : ");
                                 int studmarks = Integer.parseInt(sc.nextLine());
                                 course.marks=studmarks;
+                                Student obj=new Student();
+                                obj.Percentage(findexistingStudent);
                             }
                         }
                     }
@@ -189,17 +195,20 @@ public class Teacher extends Main{
                         }
                     }
                     break;
-                    
+                case 4:
+                    return;
             }
         }
     }
 
     void studentListUpdate()
     {
+
         while(true)
         {
             System.out.println("Enter 1 to Add Student");
             System.out.println("Enter 2 to Delete Student");
+            System.out.println("Enter 3 for teacher menu");
             int choice = Integer.parseInt(sc.nextLine());
             switch(choice)
             {
@@ -207,7 +216,7 @@ public class Teacher extends Main{
                     System.out.println("Enter Course Id : ");
                     String courseid = sc.nextLine();
 
-                    
+
                     boolean check=false;
 
                     for(Teacher teacher : teacherarraylistObj)
@@ -219,7 +228,7 @@ public class Teacher extends Main{
                                 check=true;
                                 System.out.println("\nEnter no of students you want to add in your course : ");
                                 int totalstudents=Integer.parseInt(sc.nextLine());
-        
+
                                 for(int i=0;i<totalstudents;i++)
                                 {
                                     System.out.println("Enter Student Name : ");
@@ -257,15 +266,18 @@ public class Teacher extends Main{
                     if(!check)
                     {
                         System.out.println("Enter Valid Course Name");
-                    } 
+                    }
                     break;
 
                 case 2:
                     System.out.println("\nEnter Course Id for which you want to delete Student : ");
                     String delcourseid = sc.nextLine();
+
                     System.out.println("\nEnter Studentname to be deleted : ");
                     String studname = sc.nextLine();
                     boolean flagStudent=false;
+                    int index=0;
+                    int delindex=-1;
 
                     for(Student student : studentarraylistObj)
                     {
@@ -273,11 +285,18 @@ public class Teacher extends Main{
                         {
                             flagStudent=true;
 
-                            int index = student.studentAllCourse.indexOf(delcourseid);
-                            
-                            if(index!=-1)
+                            for(Course coursee : student.studentAllCourse)
                             {
-                                student.studentAllCourse.remove(index);
+                                if(coursee.courseid.equals(delcourseid))
+                                {
+                                    delindex=index;
+                                }
+                                index++;
+                            }
+
+                            if(delindex!=-1)
+                            {
+                                student.studentAllCourse.remove(delindex);
                                 System.out.println("\n\n Remaining Students Lists");
                                 for(Student students : studentarraylistObj)
                                 {
@@ -305,6 +324,10 @@ public class Teacher extends Main{
                         System.out.println("Enter valid Student Name");
                     }
                     break;
+                case 3:
+                    return;
+
+
             }
         }
     }
@@ -314,6 +337,8 @@ public class Teacher extends Main{
         System.out.println("Enter 1 to Add or Update Course");
         System.out.println("Enter 2 to Add, Update, View Marks");
         System.out.println("Enter 3 to Add or Delete Student");
+        System.out.println("Enter 4 to main menu");
+        System.out.println("Enter 5 to exit");
         int choice = Integer.parseInt(sc.nextLine());
         switch(choice)
         {
@@ -327,14 +352,18 @@ public class Teacher extends Main{
                 studentListUpdate();
                 break;
             case 4:
+                return;
+
+            case 5:
                 System.exit(0);
                 break;
+
             default:
                 System.out.println("\n Enter Valid Choice ");
         }
     }
 
-    void teacherRegistration() 
+    void teacherRegistration()
     {
         System.out.print("\nEnter UserName : ");
         username = sc.nextLine();
@@ -366,13 +395,13 @@ public class Teacher extends Main{
             System.out.print("\nEnter Password : ");
             teacherpassword = sc.nextLine();
 
-           if(teacherpassword.equals(findexistingTeacher.password))
-           {
+            if(teacherpassword.equals(findexistingTeacher.password))
+            {
                 teacherMenu(teacherusername);
-           }
-           else{
-            System.out.println("\n Invalid Password");
-           }
+            }
+            else{
+                System.out.println("\n Invalid Password");
+            }
         }else{
             System.out.println("\n Invalid Username");
             System.out.println("\n Please register first if not registered then Login");
