@@ -36,6 +36,7 @@ public class Course extends Main {
         this.marks=marks;
     }
 
+
     String checkByTeacherName()
     {
         return this.teachername;
@@ -50,7 +51,14 @@ public class Course extends Main {
     {
         return this.marks;
     }
-    
+    String getCourseid()
+    {
+        return this.courseid;
+    }
+    String getCoursename()
+    {
+        return this.coursename;
+    }
+
 
 }
-
