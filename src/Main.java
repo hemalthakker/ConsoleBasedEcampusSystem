@@ -10,7 +10,7 @@ public class Main {
     protected static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        
+
         Student studentObj = new Student();
         Teacher teacherObj = new Teacher();
 
@@ -25,8 +25,9 @@ public class Main {
             switch (choice)
             {
                 case 1:
-                    System.out.println("Enter 1 to Register Yourself as Student");
+                    System.out.println("\nEnter 1 to Register Yourself as Student");
                     System.out.println("Enter 2 to Register Yourself as Teacher");
+                    System.out.println("Enter 3 to main menu");
                     int choiceRegister = Integer.parseInt(sc.nextLine());
                     switch (choiceRegister)
                     {
@@ -36,6 +37,9 @@ public class Main {
                         case 2:
                             teacherObj.teacherRegistration();
                             break;
+                        case 3:
+                            break;
+
                         default:
                             System.out.println("Invalid Choice");
                             break;
@@ -43,8 +47,9 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("Enter 1 to Login as Student");
+                    System.out.println("\nEnter 1 to Login as Student");
                     System.out.println("Enter 2 to Login as Teacher");
+                    System.out.println("Enter 3 to main menu");
                     int choiceSignin = Integer.parseInt(sc.nextLine());
                     switch (choiceSignin)
                     {
@@ -53,6 +58,8 @@ public class Main {
                             break;
                         case 2:
                             teacherObj.teacherSignin();
+                            break;
+                        case 3:
                             break;
                         default:
                             System.out.println("Invalid Choice");
